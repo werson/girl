@@ -1,6 +1,7 @@
 package com.werson;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HelloController {
 
-    /*@Value("${cupSize}")
-    private String cupSize;*/
+    @Value("${cupSize}")
+    private String cupSize;
 
     @Autowired
     private GirlProperties girlProperties;
@@ -28,7 +29,14 @@ public class HelloController {
 
     @GetMapping(value = "/index")
     public String index(){
+        girlProperties.setCupSize(cupSize);
         return "index";
+    }
+
+    @GetMapping(value = "/get_cup")
+    @ResponseBody
+    public String getCupSize(){
+        return girlProperties.getCupSize();
     }
 
 }
