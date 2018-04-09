@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
  * Created by wersom on 2017/6/1 0001.
  */
 @Controller
-@ResponseBody
 public class HelloController {
 
     /*@Value("${cupSize}")
@@ -20,9 +19,16 @@ public class HelloController {
 
     //@RequestMapping(value = "/hello", method = RequestMethod.GET)
     @GetMapping(value = "/hello")
+    @ResponseBody
     public String sayHi(@RequestParam(value = "id", required = false, defaultValue = "0") Integer id,
                         @RequestParam(value = "name", required = false, defaultValue = "werson") String name){
         return "id = " + id +" and name is " + name;
         //return "index";
     }
+
+    @GetMapping(value = "/index")
+    public String index(){
+        return "index";
+    }
+
 }
