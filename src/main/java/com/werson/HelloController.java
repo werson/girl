@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+
 /**
  * Created by wersom on 2017/6/1 0001.
  */
@@ -33,7 +34,7 @@ public class HelloController {
         return "index";
     }
 
-    @GetMapping(value = "/get_cup")
+    @GetMapping(value = "/getCup")
     @ResponseBody
     public String getCupSize(){
         return girlProperties.getCupSize();
