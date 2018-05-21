@@ -20,11 +20,9 @@ public class GirlController {
 
     @GetMapping(value = "/girls")
     public List<Girl> getGirlList(){
-
-        List<Girl> girlList = girlRepository.findAll();
-
-        return girlList;
+        return girlRepository.findAll();
     }
+
     @GetMapping(value = "/add")
     public Girl addGirl(@RequestParam(value = "cupsize") String cupSize,
                         @RequestParam(value = "age") Integer age){

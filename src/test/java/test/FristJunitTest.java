@@ -1,6 +1,7 @@
 package test;
 
 import org.junit.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -53,7 +54,18 @@ public class FristJunitTest {
         }
     }
 
+    @Test
+    public void testEqual(){
+        final Map<String, String> a = new HashMap<>();
+        a.put("aa", "aa");
+        Map<String, String> b = a;
+        b.put("bb", "bb");
+        System.out.println(a);
+    }
 
-
+    @Test
+    public void testStatic(){
+        
+    }
 
 }
