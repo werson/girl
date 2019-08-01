@@ -56,6 +56,14 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.twitter/util-core_2.12 -->
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>util-core_2.12</artifactId>
+			<version>6.45.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
