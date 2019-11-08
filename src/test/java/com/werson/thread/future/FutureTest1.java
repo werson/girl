@@ -1,10 +1,5 @@
 package com.werson.thread.future;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.*;
-
 public class FutureTest1 {
 
     public FutureTest1.Printer getPrinter(){
@@ -20,25 +15,6 @@ public class FutureTest1 {
 
 
     public static void main(String[] args) {
-        List<User> a = new ArrayList<>();
-        /*User b = new User();
-        b.setAge(1);
-        b.setName("1");
-
-        a.add(b);
-
-        b.setAge(2);
-        b.setName("2");
-        a.add(b);
-
-        b.setAge(3);
-        b.setName("3");
-        a.add(b);
-        System.out.println(a.size());*/
-        for(User u : a){
-            System.out.println(u.getName());
-        }
-
 
         // java8 避免空指针的使用方法  Optional
         /*FutureTest1 futureTest1 = new FutureTest1();
@@ -95,24 +71,4 @@ public class FutureTest1 {
 
     }
 
-}
-final class User{
-    private String name;
-    private int age;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }
