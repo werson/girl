@@ -1,0 +1,54 @@
+Compiled from "Digui.java"
+public class com.werson.jvm.Digui {
+  public com.werson.jvm.Digui();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: lconst_0
+       6: invokestatic  #2                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       9: putfield      #3                  // Field i:Ljava/lang/Long;
+      12: return
+
+  public void add();
+    Code:
+       0: aload_0
+       1: getfield      #3                  // Field i:Ljava/lang/Long;
+       4: astore_1
+       5: aload_0
+       6: aload_0
+       7: getfield      #3                  // Field i:Ljava/lang/Long;
+      10: invokevirtual #4                  // Method java/lang/Long.longValue:()J
+      13: lconst_1
+      14: ladd
+      15: invokestatic  #2                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+      18: dup_x1
+      19: putfield      #3                  // Field i:Ljava/lang/Long;
+      22: astore_2
+      23: aload_1
+      24: pop
+      25: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      28: new           #6                  // class java/lang/StringBuilder
+      31: dup
+      32: invokespecial #7                  // Method java/lang/StringBuilder."<init>":()V
+      35: ldc           #8                  // String result =
+      37: invokevirtual #9                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      40: aload_0
+      41: getfield      #3                  // Field i:Ljava/lang/Long;
+      44: invokevirtual #10                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      47: invokevirtual #11                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      50: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      53: aload_0
+      54: invokevirtual #13                 // Method add:()V
+      57: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: new           #14                 // class com/werson/jvm/Digui
+       3: dup
+       4: invokespecial #15                 // Method "<init>":()V
+       7: astore_1
+       8: aload_1
+       9: invokevirtual #13                 // Method add:()V
+      12: return
+}
